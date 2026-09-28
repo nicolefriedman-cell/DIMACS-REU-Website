@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicole Friedman | DIMACS REU 2026</title>
+
+  <!-- Google Fonts -->
+  <link href="./index_files/css2" rel="stylesheet">
+
+  <!-- MathJax for LaTeX Support -->
+  <script src="file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/DIMACS%20REU%202026_files/polyfill.min.js.download"></script>
+  <script id="MathJax-script" async="" src="./index_files/tex-mml-chtml.js.download"></script>
+  
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fdfdfd;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #000080;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.2rem;
+    }
+    nav {
+      background: #eaeaea;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #000080;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      color: #000080;
+      border-bottom: 3px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 0%;
+      margin-right: 2rem;
+      border: 4px solid #000080;
+    }
+    .update {
+      margin-bottom: 1.5rem;
+      background: #f9f9f9;
+      border-left: 5px solid #000080;
+      border-top: 1.5px solid #000080;
+      border-bottom: 1.5px solid #000080;
+      border-right: 1.5px solid #000080;
+      padding: 1rem;
+    }
+    .update h3 {
+      margin-top: 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #f0f0f0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+<style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("file:///C:/Users/nicol/OneDrive/Desktop/DIMACS/info_files/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style></head>
+
+<body>
+  <header>
+    <h1>Nicole Friedman</h1>
+    <p> Applied Mathematics &amp; Computer Science</p>
+  </header>
+
+  <nav>
+    <a href="https://reu.dimacs.rutgers.edu/~nf479/#acknowledgements">Acknowledgements</a>
+    <!--<a href="https://reu.dimacs.rutgers.edu/~nf479/#me">About Me</a>-->
+    <a href="https://reu.dimacs.rutgers.edu/~nf479/#project">Project Description</a>
+    <a href="https://reu.dimacs.rutgers.edu/~nf479/#updates">Weekly Log</a>
+
+  </nav>
+
+  <main>
+    <section>
+      <!--<h1>&#128679;Under construction!&#128679;</h1>-->
+      <h2>General Project Information</h2>
+      <div class="profile">
+          <div>
+        <img src="logo.png" alt="DIMACS Logo">
+      </div>
+        <div>
+          <p><strong>Name:</strong> Nicole Friedman </p>
+          <p><strong>Program:</strong> <a href="https://reu.dimacs.rutgers.edu/index.html" target="_blank">DIMACS REU 2026</a> </p>
+          <p><strong>Mentor:</strong> <a href="https://sites.google.com/view/shahrzadhaddadan" target="_blank">Prof. Shahrzad Haddadan</a></p>
+          <p><strong>Project:</strong> Mallows Model for Choice Modeling </p>
+          <p><strong>Email:</strong> Nicole.Friedman@tufts.edu </p>
+          <p><strong> Home Institution:</strong> Tufts University &#128024;</p>
+      </div>
+
+
+    
+    </div></section>
+    <section id="acknowledgements">
+      <h2>Acknowledgements</h2>
+      <p>This work was carried out while the I was a participant in the 2026
+        DIMACS REU program at Rutgers University, supported by NSF grant 
+        CCF-2447342</p>
+
+      <p> I would also like to thank Professor Shahrzad Haddadan for providing
+        mentorship, as well as Dr. Lazaros Gallos, Dr. Lawrence Frolov,
+        Dawn Bryant, and the rest of the rest of the DIMACS REU team for their
+        guidance and support throughout the REU Program. Finally, thank you to
+        Rutgers University and Charles University for their facilities.
+      </p>
+      
+
+      <!--<p> I would like to thank and acknowledge the following:</p>
+      <ul>
+        <li>Professor Shahrzad Haddadan for providing mentorship 
+        throughout this project</li>
+        <li>Dr. Lazaros 
+        Gallos, Dr. Lawrence Frolov, Dawn Bryant, and the rest of the DIMACS REU
+        team for their guidance and support during and outside of the REU 
+        program</li> 
+        <li>Rutgers University and Charles University in Prague for their
+          facilities and accommodations
+        </li>
+        <li>The National Science Foundation for funding my research under
+            grant CCF-2447342
+        </li>
+        </ul>-->
+      </section>
+    
+   <!--<section id="me">
+      <h2> About Me</h2>
+          <p>I am a student of Applied Mathematics and Computer Science 
+            currently studying at Tufts University in Medford, Massachusetts. </p>
+          <p> I aspire to start a wacky instrument band one day</p>
+
+    </section> --> 
+
+    <section id="project">
+      <h2>Project Description</h2>
+      <p><strong>Title:</strong> Mallows Model for Choice Modeling </p>
+      <p> The Mallows Model is a probabilisitc distribution that relates a
+          permutation to a known center \(\tau^*\). For some concentration
+          parameter \(\beta\), we find that the probability of a permutation
+          \(\tau\) is given by $$P(\tau)\propto e^{-\beta \cdot d(\tau, \tau^*)}$$
+          where \(d(\cdot,\cdot)\) denotes the Kendall-Tau Metric.
+      </p>
+  
+      <p> There is a notable amount of literature regarding the Mallows Model
+          in the full permutation setting, but oftentimes assuming that a set
+          of data is completely ranked both across collected data and customers
+          diminishes the realism of the model. Thus, we turn our attention to
+          the Top-\(k\) Mallows Model, which leaves all elements after the
+          top \(k\) unranked and thus uncomparable.
+      </p>
+         
+      <p> Under the Top-\(k\) model, the incomparable portion of the set and
+          need for an updated Kendall-Tau Metric introduces new structural
+          complexities to the distribution and its corresponding algorithms.
+          In particular, I aim to help construct efficient algorithms solving
+          Assortment Optimization problem, which finds the assortment of
+          elements that maximizes the expected revenue. That is, we aim to solve
+          $$\max_A\sum_{a\in A} r_a \cdot P(a|A \cup \varnothing)$$
+          where \(A\) is an assortment, \(r_a\) is the cost of element \(a\),
+          and \(\varnothing\) represents the no-purchase option.
+      </p>
+    </section>
+
+    <section id="updates">
+      <h2>Weekly Log</h2>
+
+      <div class="update">
+        <h3>Week 1: May 26th&ndash;May 31st <!--&#128644;--></h3>
+        <p>Since this was the first week of the program, the main focus of the
+          week leaned more towards understanding preliminaries and the general
+          ideas forming the foundation of the project, as well as working to
+          form social connections with my cohort. I also met with my advisor
+          for the first time, and we discussed the Generalized Mallows Model
+          and our goals for augmenting existing algorithms to solve problems in 
+          the Top-K setting.</p>
+        <p>As someone who primarily uses C or C++ for programming, I worked to
+           improve my familiarity with Python by implementing a program that
+           computes inversion tables given a permutation and a center, as well
+           as the inverse operation. I initially wanted to prove that we can
+           recover a unique permutation from a given inversion table by showing
+           that the inversion table mapping is bijective, but I realized it
+           would be simpler to find a deterministic inversion algorithm. The
+           rest of the week was spent working on setting up this website,
+           doing some background reading on the Mallows Model, preparing my
+           introductory presentation, and working on a few additional releveant
+           implementations.
+        </p>
+        <p>On the social end of things, I met a lot of the cohort on move-in
+           day, and everyone is quite personable. We've spent some time playing
+           cards, going for exploratory expeditions, and throwing around
+           various projectiles (primarily frisbees). It's also fun to find
+           people who are happy to talk about random mathematical or
+           computational topics &mdash; it's not every day that you can debate
+           the merits of Lebesgue integration! I look forward to getting to know
+           people better over the next few weeks and continue exploring campus.
+        </p>
+      </div>
+
+    <div class="update">
+        <h3>Week 2: June 1st&ndash;June 7th <!--&#x1F4D6;--></h3>
+        <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="dimacsMorning.jpeg" alt="Photo of a sunrise as viewed from the CoRE building" style="width: 150px; height: auto;">
+        <p>I started this week by watching the sunrise from the CoRE building
+           and finished implementing the computation of inversion vectors in
+           the Top-\(k\) setting, which is the backbone the Kendall-Tau Metric
+           used in the model. I also gave a brief presentation providing
+           background on and motivation for the study of the Top-\(k\) Mallows
+           Model and its corresponding research questions. 
+           </p>
+        </div>
+          <p>The rest of the week
+           was spent working on migrating some structural properties of the
+           Generalized Mallows Model to the Top-\(k\) setting and attempting to
+           prove said properties under the model constraints.
+          </p>
+      </div>
+
+      <div class="update">
+        <h3>Week 3: June 8th&ndash;June 14th</h3>
+        <p> This week, I worked on proving structural lemmas proposed in 
+            D&eacute;sir et al. translated to the Top-\(k\) setting. 
+            The structural complexities introduced by incomparability require
+            significantly more case-analysis than in the Generalized Mallows
+            Model.</p>
+            <p> Later in the week, I met with my mentor, and we discussed the
+              \(\frac{1}{\varepsilon}\) polynomial time approximation scheme
+              (PTAS), with the particular interest focusing on the cases where
+              for \(M=\lceil \frac{1}{\varepsilon} \rceil\), 
+              \(|M\cap\bar\tau|\neq \emptyset\), i.e. when our assortment size
+              considers elements from the inorderable portion of the center.
+            </p>
+      </div>
+
+      <div class="update">
+        <h3>Week 4: June 15th&ndash;June 21st</h3>
+        <p> I continued working on developing and proving propositions
+            about structural properties of the model. In the realm of assortment
+            optimization, we have discovered that optimal assortments are not
+            self-contained within subsets of the universe of products, making
+            developing an algorithm much more complicated. Rather than thinking
+            about the model generally, I am focusing more of my attention
+            on the realm of properties we can use to help with assortment
+            optimization.
+        </p>
+
+        <p> One of my roommates introduced me to the dating simulation game
+            called
+            <a href="https://akuicia.itch.io/date-math" target="_blank"> Date Math</a>, which is
+            definitely worth checking out if you want a good laugh.
+        </p>
+      </div>
+
+      <div class="update">
+        <h3>Week 5: June 22nd&ndash;June 28th</h3>
+        <p> The primary sources of literature regarding the problem of
+            assortment optimization focus on the Generalized Mallows Model,
+            and those without additional restrictive structural assumptions
+            base their algorithm on clever partitioning schemes. However,
+            since we have a natural partition with induced incomparability,
+            we need to continue to evaluate the structural properties allowing
+            us to work within assortments. In addition to computing choice
+            probabilities, the individual revenues of products require careful
+            consideration for computing which products can be discared and which
+            products are necessary candidates for the optimal assortment. </p>
+
+        <p> I've also been trying to learn some basic phrases in Czech, which
+            has been a bit more successful than I anticipated. I still don't
+            have the diacritical marks down, but my pronunciation is boarding
+            on passible. Hopefully the folks at Charles University aren't too
+            offended by my bad accent.
+        </p>
+      </div>
+
+      <div class="update">
+        <h3>Week 6: June 29 - July 5</h3>
+        <p> This week, I finished cleaning up many of my existing proofs while
+            isolating structural lemmas to improve logical modularity. We are
+            still working on determining properties necessary for an assortment
+            optimization algorithm that is sufficiently accurate without
+            requiring any assumptions regarding the placement of the no purchase
+            option.
+        </p>
+      </div>
+
+      <div class="update">
+        <h3>Week 7: July 6 - July 12</h3>
+        <p> We started working on our proof for our assortment optimization
+            algorithm in the case that the no purchase option is ranked above
+            the incomparable portion of the center. The case split is a bit more
+            nuanced than previously studied cases, requiring us to reevaluate
+            the bound we have on our approximation.
+        </p>
+      </div>
+
+      <div class="update">
+        <h3>Week 8: July 13 - July 19</h3>
+        <p> This week, I met with my PI a few last times to discuss our
+            approximation algorithm for when the no purchase option is ranked in
+            position \(k+1\). We proposed adapting the commonly used bijection
+            argument to a general non-injective mapping to find a bound for the
+            probability that an unranked element will become the choice to use
+            to bound part of our case decomposition.
+        </p>
+        <p>
+            I also gave my final presentation discussing Assortment Optimization
+            under the Top-k Mallows Model and our exact algorithm. Over the two
+            presentation days, I also had the pleasure of listening to the
+            presentations of other REU participants. Shortly after, we
+            celebrated by paying a visit to the restaurant Destination Dogs, and 
+            the next day, I crossed the Atlantic Ocean for the first time on
+            the way to Prague! I am already blown away by the architecture and
+            impressive public transit and am excited to see more in the coming
+            weeks.
+        </p>
+      </div>
+
+      <div class="update">
+        <h3>Week 9: July 20 - July 26 </h3>
+        <p> It's the first week of the Prague REU exchange program, where we
+            have been learning about graph theory and combinitorics. Aside from
+            working on my report, I also prepared and delivered a board talk,
+            diving a bit deeper into the mathematics underlying the Mallows
+            Model. Martin, Ryan, Jakub, and Larry also gave some interesting
+            talks about algorithms, algebra, and physics!
+        </p>
+      </div>
+
+      <div class="update">
+        <h3>Week 10: July 26 - July 31 </h3>
+        <p> We've reached the final week of the program. During the Midsummer
+            Combinitorial Workshop XXX +1, we've been celebrating Jarik
+            Nešetřil's birthday, discussing a lot of graph theory, and wondering
+            about the implications of AI on the job market. I've also had the
+            chance to explore the city a bit more. I'm grateful for this REU
+            experience and am exited to continue my research in the coming
+            months.
+
+        </p>
+      </div>
+  
+    </section>
+
+    
+        <button onclick="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background-color: #000080; color: white; border-style: solid; border-width: thin; border-color:#000080; border-radius: 5px; cursor: pointer;">
+            Back to Top
+        </button>
+
+        <script>
+            function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        </script>
+
+  </main>
+</body></html>
